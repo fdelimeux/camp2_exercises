@@ -2,6 +2,8 @@
 //
 // Create two objects, `frieda`, `francis` with the fields :
 //   `age` (an integer) and `name`, (obviously a string)
+const frieda = { age:22,name:"Frieda"};
+const francis = { age:17, name:"Francis"};
 
 // Create two variables `canFriedaDrinkAlcohol` and `canFrancisDrinkAlcohol` to answer,
 // respectively, to the question "Can he / she drink alcohol?".
@@ -14,3 +16,16 @@
 // it is expected to see failures for these tests:
 // "Frieda|Francis should be inside an object frieda|francis".
 // All the other tests should work.
+
+let canFriedaDrinkAlcohol="";
+let canFrancisDrinkAlcohol="";
+if (frieda.age > 17){
+  canFriedaDrinkAlcohol = true;
+} else {
+  canFriedaDrinkAlcohol = false;
+}
+if (francis.age > 17){
+  canFrancisDrinkAlcohol = true;
+} else {
+  canFrancisDrinkAlcohol = false;
+}
