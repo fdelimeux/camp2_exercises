@@ -46,16 +46,21 @@ const MORSE_CODE = {
 
 
 function convertMorse(toconvert) {
-  let splitwords=toconvert.trim().split(" ");
-  let splitletters=splitwords.map((letter) => MORSE_CODE[letter]).join("");
-  return splitletters;
+  let result = "";
+  if (toconvert === "") { result=" "; }
+  else {
+    result=MORSE_CODE[toconvert];
+  }
+
+  return result;
 }
 
 function decodeMorse(morse) {
   // Your code here
   let result="";
-  let splitwords=morse.split("  ");
-  return splitwords.map(convertMorse).join(" ");
+  let splitmorse=morse.split(" ");
+  const morsedecod=splitmorse.map(convertMorse).join("").replace(/\s+/g," ");
+  return morsedecod;
 }
 
 console.log(decodeMorse(".... . -.--   .--- ..- -.. ."));

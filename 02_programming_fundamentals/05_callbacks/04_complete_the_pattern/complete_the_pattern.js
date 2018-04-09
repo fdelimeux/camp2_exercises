@@ -35,7 +35,17 @@
 
 function pattern(size) {
   // Your code here
+  let repeat = "";
+  for (let i=1; i<=size;i++) {
+    for (let a=1; a<=i ; a++) {
+      repeat+=i;
+    }
+    repeat+="\n";
+  }
+  return repeat.trim();
 }
+
+console.log(pattern(4));
 
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
