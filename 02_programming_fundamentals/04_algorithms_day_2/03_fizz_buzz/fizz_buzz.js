@@ -9,8 +9,26 @@
 */
 
 function fizzBuzz(list) {
-
+  let listsize=list.length;
+  let newlist=[];
+  //console.log(listsize);
+  for (let i=0; i<listsize; i++) {
+    if ((list[i]%3 === 0) && (list[i]%5 === 0)) {
+      newlist.push("FizzBuzz");
+    } else if (list[i]%3 === 0) {
+      newlist.push("Fizz");
+    }
+    else if (list[i]%5 === 0) {
+      newlist.push("Buzz");
+    }
+    else {
+      newlist.push(list[i]);
+    }
+  }
+  return newlist;
 }
 
-
+const testlist= [1,2,3,4,5];
+let newarray=fizzBuzz(testlist);
+console.log(newarray);
 module.exports = fizzBuzz;
