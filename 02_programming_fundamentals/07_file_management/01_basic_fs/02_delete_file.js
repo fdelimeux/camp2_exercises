@@ -3,16 +3,16 @@
 //
 // The function returns a boolean indicating if it successfully removed the file.
 const fs = require("fs");
-const path = require("path");
 
 function deleteFile(filepath) {
-  let result = "na";
-  if (fs.existsSync(filepath)) {
-    fs.unlinkSync(filepath);
-  }
-  result = fs.existsSync(filepath);
-  return result;
+  //et result = "na";
+
+  fs.unlink(filepath,(error) => {
+    if (error) {
+      console.warn(error);
+    }
+  });
+
 }
 
-console.log(deleteFile("test.txt"));
-//module.exports = deleteFile();
+module.exports = deleteFile;
