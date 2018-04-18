@@ -1,1 +1,1 @@
-curl wttr.in/brussels?lang=fr > brussels.weather
+curl wttr.in/brussels?lang=fr -o brussels.weather
