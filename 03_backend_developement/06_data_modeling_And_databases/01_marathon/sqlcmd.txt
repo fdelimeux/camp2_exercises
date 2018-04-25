@@ -1,0 +1,11 @@
+INSERT INTO race (racename,runnername,runnerbib,runnerposition,runnertime) VALUES ('NomCourse','NomCourreur','NumeroBib','NumPosition','SonTemps');
+
+select * from race where racename = 'New York City Marathon - Women';
+
+select * from race where racename = 'New York City Marathon - Men' order by runnerposition;
+
+select * from race where racename = 'New York City Marathon - Men' and runnertime < '2:30:00' order by runnerposition;
+
+select * from race where racename = 'New York City Marathon - Men' and runnertime < '2:15:00' and runnerbib < 100 order by runnerposition;
+
+select * from race where racename = 'New York City Marathon - Men' and runnertime < (select runnertime from race where runnername = 'Naert Koen') order by runnerposition;
