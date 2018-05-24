@@ -1,0 +1,25 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="row">
+
+
+    {% for cat in cats %}
+
+    <div class="card" style="width:30%; margin:10px;">
+      <img class="card-img-top" src="https://www.decathlon.fr/media/{{cat.image_path}}" alt="Card image cap">
+      <div class="card-body">
+        <a href="/products/{{cat.decathlon_id}}">
+        <h5 class="card-title">{{cat.title}}</h5>
+        </a>
+        <!-- <p class="card-text">{{cat.description}}</p> -->
+      </div>
+    </div>
+
+    {% endfor %}
+</div>
+</div>
+{% endblock %}

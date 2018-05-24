@@ -1,15 +1,15 @@
 function go(options) {
   let {
     speed = 4,
-    enable: { hyperdrive = false, frobnifier = true}
+    enable = { hyperdrive = false, frobnifier = true} = {}
   } = options;
 
-  console.log("speed=", speed, "hyperdrive:", hyperdrive, "frobnifier:", frobnifier);
+ console.log("speed=", speed, "hyperdrive:", hyperdrive, "frobnifier:", frobnifier);
 }
 
 go({ speed: 5 });
 
-function lastIndexOf(arr, elt, start) {
+function lastIndexOf(arr, elt, start = arr.length) {
   for (let i = start - 1; i >= 0; i--) {
     if (arr[i] === elt) {
       return i;

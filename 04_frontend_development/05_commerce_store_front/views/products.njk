@@ -1,0 +1,28 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    {% for cat in cats %}
+      <div class="card col-md-3 ml-auto" style="width:30%; margin:10px;">
+        <img class="card-img-top" src="https://www.decathlon.fr/media/{{cat.image_path}}" alt="Card image cap">
+      </div>
+      <div class="card col-md-3 mr-auto">
+
+          <h6 class="card-title">{{cat.title}}</h6>
+          {{cat.min_price}} €<br>
+          Note : {{cat.rating}} / 5
+          <!-- <p class="card-text">{{cat.description}}</p> -->
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+
+{% endfor %}
+{% endblock %}
