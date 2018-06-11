@@ -1,7 +1,7 @@
 // Insert code here
 class Aquarium {
 
-  constructor(fish, algae) {
+  constructor(fish = [], algae = []) {
     this.fishes = fish;
     this.algaes = algae;
   }
@@ -10,7 +10,7 @@ class Aquarium {
     this.fishes.push(newFish);
   }
 
-  addAlgae(newAlgae) {
+  addAlgae(newAlgae) { 
     this.algaes.push(newAlgae);
   }
 
